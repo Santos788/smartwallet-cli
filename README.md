@@ -40,7 +40,7 @@ Como Executar o Projeto
 
 1. Clone o repositório:
 
-git clone https://github.com/seu-usuario/smartwallet-cli.git
+git clone https://github.com/Santos788/smartwallet-cli.git
 
 2. Acesse a pasta do projeto:
 
