@@ -1,4 +1,4 @@
-SmartWallet CLI
+#SmartWallet CLI
 
 Sistema simples de controle financeiro no terminal, desenvolvido em Python.
 O programa permite registrar receitas e despesas, listar movimentações e visualizar o saldo atual.
@@ -44,7 +44,7 @@ git clone https://github.com/Santos788/smartwallet-cli.git
 
 2. Acesse a pasta do projeto:
 
-cd smartwallet-cli
+smartwallet-cli
 
 3. Execute o programa:
 
