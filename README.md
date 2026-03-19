@@ -1,5 +1,5 @@
 💰 SmartWallet CLI
-� � �
+
 Sistema de controle financeiro no terminal desenvolvido em Python.
 Permite gerenciar receitas e despesas de forma simples, com persistência em arquivo.
 
