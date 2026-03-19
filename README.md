@@ -1,77 +1,35 @@
-💰 SmartWallet CLI
+# 💰 SmartWallet CLI
 
-Sistema de controle financeiro no terminal desenvolvido em Python.
-Permite gerenciar receitas e despesas de forma simples, com persistência em arquivo.
+Sistema de controle financeiro simples feito em Python (terminal).
 
-Este projeto foi criado para praticar lógica de programação, manipulação de arquivos e organização de código.
+## 🚀 Funcionalidades
 
----
+- Adicionar receitas
+- Adicionar despesas
+- Listar movimentações
+- Ver saldo atual
 
-🚀 Funcionalidades
+## 🛠️ Tecnologias
 
-➕ Cadastro de receitas
-➖ Cadastro de despesas
-📄 Listagem de movimentações
-💵 Cálculo automático de saldo
-💾 Salvamento em arquivo .txt
-🖥️ Interface via terminal (CLI)
+- Python 3
 
----
+## ▶️ Como executar
+python smartwallet.py
 
-🛠️ Tecnologias
+## 📂 Estrutura dos dados
+Os dados são armazenados em um arquivo dados.txt no formato:
 
-Python 3
-Git
-GitHub
+tipo,descricao,valor
+Exemplo:
 
----
-📂 Estrutura do Projeto
+receita,Salário,2500
+despesa,Aluguel,800
 
-smartwallet-cli/
-├── main.py        # Código principal
-├── dados.txt      # Armazenamento das movimentações
-└── README.md      # Documentação
----
-
-▶️ Como Executar
-
-# Clonar o repositório
-git clone https://github.com/Santos788/smartwallet-cli.git
-
-# Acessar a pasta
-cd smartwallet-cli
-
-# Executar o sistema
-python main.py
----
-
-🧭 Menu do Sistema
-
-=== SMARTWALLET ===
-1 - Adicionar Receita
-2 - Adicionar Despesa
-3 - Listar Movimentações
-4 - Ver Saldo
-5 - Sair
----
-
-🎯 Objetivo
-
-Projeto focado em prática de:
-Lógica de programação
-Estruturas condicionais (if, elif, else)
-Laços de repetição (while)
-Manipulação de arquivos
-Organização de código com funções
-
----
-📌 Próximas melhorias
-
-[ ] Interface mais amigável
-[ ] Separação por categorias
-[ ] Exportação para CSV
-[ ] Versão com interface gráfica (GUI)
----
-
+## 📈 Possíveis melhorias
+Interface gráfica (Tkinter ou Web)
+Banco de dados (SQLite)
+Categorias de despesas
+Relatórios mensais
+Exportação para CSV
 👨‍💻 Autor
 Clayton Santos
