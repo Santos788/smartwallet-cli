@@ -1,58 +1,51 @@
-#SmartWallet CLI
-
-Sistema simples de controle financeiro no terminal, desenvolvido em Python.
-O programa permite registrar receitas e despesas, listar movimentações e visualizar o saldo atual.
+💰 SmartWallet CLI
+� � �
+Sistema de controle financeiro no terminal desenvolvido em Python.
+Permite gerenciar receitas e despesas de forma simples, com persistência em arquivo.
 
 Este projeto foi criado para praticar lógica de programação, manipulação de arquivos e organização de código.
 
 ---
 
-Funcionalidades
+🚀 Funcionalidades
 
-- Cadastro de receitas
-- Cadastro de despesas
-- Listagem de movimentações
-- Cálculo automático de saldo
-- Persistência de dados em arquivo ".txt"
-- Menu interativo no terminal
-
----
-
-Tecnologias Utilizadas
-
-- Python 3
-- Git
-- GitHub
+➕ Cadastro de receitas
+➖ Cadastro de despesas
+📄 Listagem de movimentações
+💵 Cálculo automático de saldo
+💾 Salvamento em arquivo .txt
+🖥️ Interface via terminal (CLI)
 
 ---
 
-Estrutura do Projeto
+🛠️ Tecnologias
+
+Python 3
+Git
+GitHub
+
+---
+📂 Estrutura do Projeto
 
 smartwallet-cli/
-
-main.py → código principal do sistema
-dados.txt → arquivo onde ficam salvas as movimentações
-README.md → documentação do projeto
-
+├── main.py        # Código principal
+├── dados.txt      # Armazenamento das movimentações
+└── README.md      # Documentação
 ---
 
-Como Executar o Projeto
+▶️ Como Executar
 
-1. Clone o repositório:
-
+# Clonar o repositório
 git clone https://github.com/Santos788/smartwallet-cli.git
 
-2. Acesse a pasta do projeto:
+# Acessar a pasta
+cd smartwallet-cli
 
-smartwallet-cli
-
-3. Execute o programa:
-
+# Executar o sistema
 python main.py
-
 ---
 
-Exemplo do Menu
+🧭 Menu do Sistema
 
 === SMARTWALLET ===
 1 - Adicionar Receita
@@ -60,21 +53,25 @@ Exemplo do Menu
 3 - Listar Movimentações
 4 - Ver Saldo
 5 - Sair
-
 ---
 
-Objetivo do Projeto
+🎯 Objetivo
 
-Este projeto foi desenvolvido para praticar:
-
-- Lógica de programação em Python
-- Estruturas condicionais ("if", "elif", "else")
-- Laços de repetição ("while")
-- Manipulação de arquivos
-- Organização de código utilizando funções
+Projeto focado em prática de:
+Lógica de programação
+Estruturas condicionais (if, elif, else)
+Laços de repetição (while)
+Manipulação de arquivos
+Organização de código com funções
 
 ---
+📌 Próximas melhorias
 
-Autor
+[ ] Interface mais amigável
+[ ] Separação por categorias
+[ ] Exportação para CSV
+[ ] Versão com interface gráfica (GUI)
+---
 
+👨‍💻 Autor
 Clayton Santos
