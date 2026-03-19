@@ -1,9 +1,23 @@
-# SmartWallet CLI
+# smartwallet.py
+
+"""
+SmartWallet CLI
+Sistema simples de controle financeiro no terminal.
+
+Funcionalidades:
+- Adicionar receitas
+- Adicionar despesas
+- Listar movimentações
+- Ver saldo
+
+Autor: Clayton Santos
+"""
 
 ARQUIVO_DADOS = "dados.txt"
 
 
 def carregar_dados():
+    """Carrega os dados do arquivo."""
     dados = []
 
     try:
@@ -21,22 +35,25 @@ def carregar_dados():
                     dados.append([tipo, descricao, float(valor)])
 
     except FileNotFoundError:
+        # Arquivo ainda não existe (primeira execução)
         pass
 
     return dados
 
 
 def salvar_dados(dados):
+    """Salva os dados no arquivo."""
     with open(ARQUIVO_DADOS, "w", encoding="utf-8") as arquivo:
         for tipo, descricao, valor in dados:
             arquivo.write(f"{tipo},{descricao},{valor}\n")
 
 
 def adicionar_receita(dados):
+    """Adiciona uma nova receita."""
     descricao = input("Descrição da receita: ").strip()
 
     try:
-        valor = float(input("Valor: "))
+        valor = float(input("Valor: R$ "))
     except ValueError:
         print("❌ Valor inválido.")
         return
@@ -44,14 +61,15 @@ def adicionar_receita(dados):
     dados.append(["receita", descricao, valor])
     salvar_dados(dados)
 
-    print("✅ Receita adicionada com sucesso!")
+    print("✅ Receita adicionada!")
 
 
 def adicionar_despesa(dados):
+    """Adiciona uma nova despesa."""
     descricao = input("Descrição da despesa: ").strip()
 
     try:
-        valor = float(input("Valor: "))
+        valor = float(input("Valor: R$ "))
     except ValueError:
         print("❌ Valor inválido.")
         return
@@ -59,19 +77,24 @@ def adicionar_despesa(dados):
     dados.append(["despesa", descricao, valor])
     salvar_dados(dados)
 
-    print("✅ Despesa adicionada com sucesso!")
+    print("✅ Despesa adicionada!")
 
 
 def listar_movimentacoes(dados):
+    """Lista todas as movimentações."""
     if not dados:
-        print("Nenhuma movimentação encontrada.")
+        print("⚠️ Nenhuma movimentação encontrada.")
         return
 
+    print("\n📋 MOVIMENTAÇÕES")
+    print("-" * 30)
+
     for tipo, descricao, valor in dados:
-        print(f"{tipo.capitalize()} | {descricao} | R$ {valor:.2f}")
+        print(f"{tipo.capitalize():<10} | {descricao:<15} | R$ {valor:.2f}")
 
 
 def ver_saldo(dados):
+    """Calcula e exibe o saldo."""
     saldo = 0
 
     for tipo, _, valor in dados:
@@ -80,20 +103,25 @@ def ver_saldo(dados):
         else:
             saldo -= valor
 
-    print(f"💰 Saldo atual: R$ {saldo:.2f}")
+    print(f"\n💰 Saldo atual: R$ {saldo:.2f}")
 
 
-def menu():
+def exibir_menu():
+    """Exibe o menu principal."""
+    print("\n=== SMARTWALLET ===")
+    print("1 - Adicionar Receita")
+    print("2 - Adicionar Despesa")
+    print("3 - Listar Movimentações")
+    print("4 - Ver Saldo")
+    print("5 - Sair")
+
+
+def main():
+    """Função principal do sistema."""
     dados = carregar_dados()
 
     while True:
-        print("\n=== SMARTWALLET ===")
-        print("1 - Adicionar Receita")
-        print("2 - Adicionar Despesa")
-        print("3 - Listar Movimentações")
-        print("4 - Ver Saldo")
-        print("5 - Sair")
-
+        exibir_menu()
         opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
@@ -117,4 +145,4 @@ def menu():
 
 
 if __name__ == "__main__":
-    menu()
+    main()
